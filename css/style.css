@@ -1,0 +1,413 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+.contacts {
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  font: 12px/22px 'Roboto', Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.contacts .txt {
+  float: left;
+  width: 50%;
+  padding: 16px 20px 16px 0;
+  border-right: 1px solid #fff;
+  text-align: right;
+}
+.contacts .way {
+  float: right;
+  width: 50%;
+  padding: 5px 0 5px 20px;
+  border-left: 1px solid #fff;
+}
+.contacts .way a {
+  margin-left: 5px;
+  padding: 2px 5px;
+  background: rgba(78, 132, 124, 0.5);
+  text-decoration: none;
+  color: #fff;
+}
+.contacts .way .e-mail a {
+  margin-left: 15px;
+}
+#app {
+  min-height: 100%;
+}
+#app .scr.scr_1 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: #363636;
+}
+#app .scr.scr_1 .background {
+  width: 100%;
+  height: 100%;
+}
+#app .scr.scr_1 .background .bgr {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#app .scr.scr_1 .background .bgr.bgr1 {
+  background: url('../img/screen1-bg.jpg') no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+#app .scr.scr_1 .background .bgr.bgr1:before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+#app .scr.scr_1 .inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#app .scr.scr_1 .inner .photo {
+  margin-top: 50px;
+  height: 200px;
+}
+#app .scr.scr_1 .inner .photo img {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 3px solid #fff;
+}
+#app .scr.scr_1 .inner .name {
+  margin-top: 45px;
+  font: 50px/52px 'Roboto', Arial, Helvetica, sans-serif;
+  letter-spacing: 12px;
+  text-align: center;
+  color: #fff;
+}
+#app .scr.scr_1 .inner .occupation {
+  margin-top: 45px;
+  padding: 30px 0;
+  background: rgba(78, 132, 124, 0.5);
+  font: 12px/14px 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #fff;
+}
+#app .scr.scr_2 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background: #eaeaea;
+}
+#app .scr.scr_2 .inner .hello {
+  margin-top: 45px;
+  font: 12px/16px 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #1e1e1e;
+}
+#app .scr.scr_2 .inner .myworks {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  padding-bottom: 140px;
+}
+#app .scr.scr_2 .inner .myworks .work {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 10px;
+  overflow: hidden;
+  background: #ccc;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+#app .scr.scr_2 .inner .myworks .work .image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#app .scr.scr_2 .inner .myworks .work .image:before {
+  -webkit-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(78, 132, 124, 0.9);
+}
+#app .scr.scr_2 .inner .myworks .work .inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#app .scr.scr_2 .inner .myworks .work .inner .prg-text {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+#app .scr.scr_2 .inner .myworks .work .inner .prg-text span {
+  display: table-cell;
+  vertical-align: middle;
+  font: 30px/40px 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #fff;
+}
+#app .scr.scr_2 .inner .myworks .work .inner .sample-text {
+  -webkit-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+#app .scr.scr_2 .inner .myworks .work .inner .sample-text span {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 10px;
+  font: 14px/20px 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #fff;
+}
+#app .scr.scr_2 .inner .myworks .work:hover .image:before,
+#app .scr.scr_2 .inner .myworks .work:active .image:before {
+  opacity: 1;
+}
+#app .scr.scr_2 .inner .myworks .work:hover .inner .sample-text,
+#app .scr.scr_2 .inner .myworks .work:active .inner .sample-text {
+  opacity: 1;
+}
+#app .scr.scr_2 .inner .myworks .work.prg {
+  pointer-events: none;
+}
+#app .scr.scr_2 .inner .myworks .work.prg .image:before {
+  opacity: 1;
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(78, 132, 124, 0.9);
+  -webkit-animation: progress 5s linear infinite;
+  animation: progress 5s linear infinite;
+  background-repeat: repeat-x;
+  -webkit-background-size: 240px 240px;
+          background-size: 240px 240px;
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+@-webkit-keyframes progress {
+  to {
+    background-position: 240px 0;
+  }
+}
+@keyframes progress {
+  to {
+    background-position: 240px 0;
+  }
+}
+#app .scr.scr_2 .inner .myworks .work.prg .prg-text {
+  display: table;
+}
+#app .scr.scr_2 .inner .myworks .work.traktrain .image {
+  background: url('../img/work-traktrain.jpg') no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+#app .scr.scr_2 .inner .myworks .work.mayak .image {
+  background: url('../img/work-mayak.jpg') no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+#app .scr.scr_2 .inner .myworks .work.polimer .image {
+  background: url('../img/work-polimer.jpg') no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+#app .scr.scr_2 .inner .myworks .work.sad .image {
+  background: url('../img/work-sad.jpg') no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+#app .scr.scr_2 .inner .myworks .work.smm4me .image {
+  background: url('../img/work-smm4me.jpg') no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+#app .scr.scr_2 .inner .myworks .work.implantology .image {
+  background: url('../img/work-implantology.jpg') no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+#app .scr.scr_2 .inner .myworks .work.tourazura .image {
+  background: url('../img/work-tourazura.jpg') no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+#app .scr.scr_2 .inner .myworks .work.lovit .image {
+  background: url('../img/work-lovit.jpg') no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+#app .scr.scr_2 .inner .myworks .work.lealta .image {
+  background: url('../img/work-lealta.jpg') no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+#app .scr.scr_2 .inner .myworks .work.counter .image {
+  background: url('../img/work-counter.jpg') no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+#app .scr.scr_2 .inner .footer {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  background: url('../img/footer-bg.jpg') no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+#app .scr.scr_2 .inner .footer:before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+#app .scr.scr_2 .inner .footer .contacts {
+  bottom: 23px;
+}
+#app .scr.scr_2 .inner .footer .contacts .txt {
+  padding: 5px 20px 5px 0;
+}
+@media (max-width: 768px) {
+  .contacts {
+    font: 10px/22px 'Roboto', Arial, Helvetica, sans-serif;
+  }
+}
+@media (max-width: 600px) {
+  .contacts {
+    font: 8px/22px 'Roboto', Arial, Helvetica, sans-serif;
+  }
+}
+@media (max-width: 500px) {
+  .contacts {
+    bottom: 20px;
+    font: 8px/16px 'Roboto', Arial, Helvetica, sans-serif;
+  }
+  .contacts .txt {
+    float: none;
+    width: 100%;
+    padding: 0;
+    border: none;
+    text-align: center;
+  }
+  .contacts .way {
+    float: none;
+    width: 100%;
+    padding: 0;
+    border: none;
+    text-align: center;
+  }
+  .contacts .way a {
+    margin-left: 0;
+  }
+  .contacts .way .e-mail a {
+    margin-left: 0;
+  }
+  #app .scr.scr_1 .inner .name {
+    font: 32px/36px 'Roboto', Arial, Helvetica, sans-serif;
+    letter-spacing: 6px;
+  }
+  #app .scr.scr_2 .inner .footer .contacts {
+    bottom: 18px;
+  }
+  #app .scr.scr_2 .inner .footer .contacts .txt {
+    padding: 0;
+  }
+}
+@media (max-width: 375px) {
+  #app .scr.scr_1 .inner .photo {
+    margin-top: 20px;
+    height: 120px;
+  }
+  #app .scr.scr_1 .inner .name {
+    margin-top: 20px;
+  }
+  #app .scr.scr_1 .inner .occupation {
+    margin-top: 20px;
+  }
+  #app .scr.scr_2 .inner .hello {
+    font: 10px/16px 'Roboto', Arial, Helvetica, sans-serif;
+  }
+}
