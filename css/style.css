@@ -13,10 +13,6 @@ html {
   content: "";
   clear: both;
 }
-html,
-body {
-  height: 100%;
-}
 body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
@@ -239,9 +235,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  content: 'html';
+  content: 'HTML';
   font: 10px/34px 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
   text-align: center;
   color: #FFF;
 }
@@ -254,9 +249,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  content: 'css';
+  content: 'CSS';
   font: 12px/34px 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
   text-align: center;
   color: #FFF;
 }
@@ -271,7 +265,6 @@ body {
   height: 100%;
   content: 'js';
   font: 14px/34px 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
   text-align: center;
   color: #FFF;
 }
@@ -428,9 +421,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  content: 'less';
+  content: 'LESS';
   font: 10px/34px 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
   text-align: center;
   color: #FFF;
 }
@@ -443,9 +435,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  content: 'jq';
+  content: 'jQ';
   font: 14px/34px 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
   text-align: center;
   color: #FFF;
 }
@@ -458,9 +449,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  content: 'ps';
+  content: 'Ps';
   font: 14px/34px 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
   text-align: center;
   color: #FFF;
 }
@@ -473,9 +463,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  content: 'gulp';
+  content: 'Gulp';
   font: 10px/34px 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
   text-align: center;
   color: #FFF;
 }
@@ -488,9 +477,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  content: 'git';
+  content: 'Git';
   font: 12px/34px 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
   text-align: center;
   color: #FFF;
 }
@@ -503,9 +491,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  content: 'vue';
+  content: 'Vue';
   font: 12px/34px 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
   text-align: center;
   color: #FFF;
 }
@@ -531,7 +518,7 @@ body {
   overflow: hidden;
   width: 100%;
   min-height: 100vh;
-  background: #eaeaea;
+  background: #cccccc;
 }
 #app .scr.scr_2 .inner .hello {
   margin-top: 45px;
@@ -600,7 +587,7 @@ body {
 #app .scr.scr_2 .inner .myworks .work .inner .prg-text span {
   display: table-cell;
   vertical-align: middle;
-  font: 30px/40px 'Roboto', Arial, Helvetica, sans-serif;
+  font: 24px/28px 'Roboto', Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
