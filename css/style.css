@@ -654,6 +654,12 @@ body {
 #app .scr.scr_2 .inner .myworks .work.prg .prg-text {
   display: table;
 }
+#app .scr.scr_2 .inner .myworks .work.meetkz .image {
+  background: url('../img/work-meetkz.gif') no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
 #app .scr.scr_2 .inner .myworks .work.traktrain .image {
   background: url('../img/work-traktrain.jpg') no-repeat;
   background-position: 50% 50%;
