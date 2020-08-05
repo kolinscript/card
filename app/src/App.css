@@ -9,7 +9,8 @@
     min-height: 100vh;
 }
 
-.section {
+.main {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,24 +22,61 @@
 }
 
 .wrapper-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 20px solid #ffffff17;
+    padding: 40px;
+}
+
+.border {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 40px;
+}
+
+.border > span {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.border > span:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid #ffffff38;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.item {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: absolute;
-    width: 90%;
-    height: 90%;
-    border: 1px solid #ffffff;
+    width: 100%;
+    height: 100%;
 }
 
 h1, h2 {
     color: #ffffff;
     padding: 12px 20px;
-    /*background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
-    /*background-size: 800% 800%;*/
-    /*animation: rainbow 16s ease infinite;*/
 }
 
 h1 {
@@ -49,7 +87,7 @@ h1 {
 
 h2 {
     margin: 0;
-    font: 500 52px/54px 'Wire One', sans-serif;
+    font: 500 112px/114px 'Wire One', sans-serif;
     text-transform: uppercase;
 }
 
@@ -57,13 +95,22 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
 }
 
 .link {
-    width: 42px;
-    height: 42px;
-    margin-top: 20px;
-    margin-left: 40px;
+    width: 110px;
+    height: 110px;
+    margin-left: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.link > a.gmail {
+    background-color: #ffffff;
+}
+.link > a.gmail:hover {
+    background-color: rgba(245, 245, 245, 0.75);
 }
 
 .link:first-child {
@@ -87,12 +134,19 @@ a.github {
     animation: logo-spin infinite 60s linear;
 }
 
+a.gmail {
+    background: url("./gmail.svg") no-repeat;
+    background-size: 102%;
+    background-position: 50%;
+    animation: logo-spin infinite 30s linear;
+}
+
 a.telega {
     background-color: #ffffff;
     mask-image: url("./telega.svg");
     mask-size: cover;
     -webkit-mask-size: cover;
-    animation: logo-spin infinite 10s linear;
+    animation: logo-spin infinite 15s linear;
 }
 
 a:hover {
