@@ -49,7 +49,7 @@ class App extends Component {
                                 customPageNumber={this.state.currentPage}
                             >
                                 <div className="item one">
-                                    <div className={ this.state.qrCodeShow ? 'block hidden' : 'block' }>
+                                    <div className={this.state.qrCodeShow ? 'block hidden' : 'block'}>
                                         <div className="center">
                                             <div className="top">
                                                 <div className="top-one">
@@ -103,6 +103,12 @@ class App extends Component {
                                     <div className={this.state.qrCodeShow ? 'qr-code show' : 'qr-code'}>
                                         <a className="code" onClick={this.showQrCOde}></a>
                                     </div>
+                                </div>
+
+                                <div className="item fish">
+                                    🚧
+                                    <span className="title">CAUTION</span>
+                                    <span className="subtitle">the page is under construction</span>
                                 </div>
 
                                 {/*<div className="item two">*/}
