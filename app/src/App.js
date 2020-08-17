@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css';
+import './App.scss';
 import {isNil} from "lodash";
 import ReactPageScroller from "react-page-scroller";
 import {updateCanvas} from "./misc";
@@ -10,11 +10,11 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentPage: null
+            currentPage: null,
+            qrCodeShow: false
         };
-        this.handleLoad = this.handleLoad.bind(this);
-        this.drawBackground = this.drawBackground.bind(this);
-        this.contentRef = React.createRef();
+        this.handlePageChange = this.handlePageChange.bind(this);
+        this.showQrCOde = this.showQrCOde.bind(this);
     }
 
     componentDidMount() {
@@ -26,66 +26,20 @@ class App extends Component {
         window.removeEventListener('load', this.handleLoad);
     }
 
-    handleLoad() {
-        const url_current = window.location.href;
-        console.log(url_current);
-    }
-
     handlePageChange = number => {
-        this.setState({ currentPage: number }); // set currentPage number, to reset it from the previous selected.
+        this.setState({currentPage: number}); // set currentPage number, to reset it from the previous selected.
     };
 
-    wheel(event) {
-        if (this.state.scrollerIndex >= 0) {
-            if (event.deltaY < 0) {
-                // scrollWindowUp();
-                if (!this.state.scrollerActing) {
-                    console.info('SCROLLUP ' + event.deltaY);
-                    this.setState({scrollerIndex: this.state.scrollerIndex + 1, scrollerActing: true}, () => {
-                        this.contentRef.current.style.transform = `translate3d(0, ${(this.state.scrollerIndex) * -100}%, 0)`;
-                        console.log('scrollerIndex ', this.state.scrollerIndex);
-                        console.log('scrollerActing ', this.state.scrollerActing);
-                        setTimeout(() => {
-                            this.setState({scrollerActing: false});
-                        }, 2000);
-                    });
-                }
-            } else {
-                // scrollWindowDown;
-                if (!this.state.scrollerActing) {
-                    console.info('SCROLLDOWN ' + event.deltaY);
-                    if (this.state.scrollerIndex === 0) {
-                        this.setState({scrollerIndex: this.state.scrollerIndex, scrollerActing: true}, () => {
-                            this.contentRef.current.style.transform = `translate3d(0, 0, 0)`;
-                            console.log('scrollerIndex ', this.state.scrollerIndex);
-                            console.log('scrollerActing ', this.state.scrollerActing);
-                            setTimeout(() => {
-                                this.setState({scrollerActing: false});
-                            }, 2000);
-                        });
-                    } else {
-                        this.setState({scrollerIndex: this.state.scrollerIndex - 1, scrollerActing: true}, () => {
-                            this.contentRef.current.style.transform = `translate3d(0, ${(this.state.scrollerIndex) * 100}%, 0)`;
-                            console.log('scrollerIndex ', this.state.scrollerIndex);
-                            console.log('scrollerActing ', this.state.scrollerActing);
-                            setTimeout(() => {
-                                this.setState({scrollerActing: false});
-                            }, 2000);
-                        });
-                    }
-                }
-            }
-        }
+    showQrCOde() {
+        this.setState({qrCodeShow: !this.state.qrCodeShow});
     }
 
     render() {
         return (
             <div className="app">
-                <div className={'main'}>
+                <div className="main">
                     <div className="wrapper-canvas"></div>
-                    <div className="wrapper-content"
-                         onWheel={(e) => this.wheel(e)}
-                    >
+                    <div className="wrapper-content">
                         <div className="border"><span></span></div>
                         <div className="content">
                             <ReactPageScroller
@@ -94,37 +48,97 @@ class App extends Component {
                                 pageOnChange={this.handlePageChange}
                                 customPageNumber={this.state.currentPage}
                             >
-                                <div className="item">
-                                    <h1>frontend engineer</h1>
-                                    <h2>Nikolai Koshkarov</h2>
-                                    <div className="links">
-                                        <div className="link">
-                                            <a className="github"
-                                               href="https://github.com/kolinscript"
-                                               target="_self"
-                                               rel="noopener noreferrer"
-                                            >github
-                                            </a>
+                                <div className="item one">
+                                    <div className={ this.state.qrCodeShow ? 'block hidden' : 'block' }>
+                                        <div className="center">
+                                            <div className="top">
+                                                <div className="top-one">
+                                                    <span className="el one">nikolai</span>
+                                                </div>
+                                                <div className="top-two">
+                                                    <span className="el one">Koshkarov</span>
+                                                </div>
+                                            </div>
+                                            <div className="bot">
+                                                <div className="bot-one">
+                                                    <span className="el one visible">frontend</span>
+                                                    <span className="el two">₣ⱤØ₦₮Ɇ₦Đ</span>
+                                                    <span className="el three">乍尺回几卞ヨ几句</span>
+                                                    <span className="el four">FЯӨПƬΣПD</span>
+                                                </div>
+                                                <div className="bot-two">
+                                                    <span className="el one">engineer</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="link">
-                                            <a className="gmail"
-                                               mailTo="sdaasda"
-                                            >telegram
-                                            </a>
+
+                                        <div className="links">
+                                            <div className="link">
+                                                <a className="telega"
+                                                   href="https://t.me/koshkarovnik"
+                                                   target="_blank"
+                                                   rel="noopener noreferrer"
+                                                >Telegram
+                                                </a>
+                                            </div>
+                                            <div className="link">
+                                                <a className="gmail"
+                                                   href="mailto:koshkarovnik@gmail.com"
+                                                >Mail
+                                                </a>
+                                            </div>
+                                            <div className="link">
+                                                <a className="github"
+                                                   href="https://github.com/kolinscript"
+                                                   target="_self"
+                                                   rel="noopener noreferrer"
+                                                >Git
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div className="link">
-                                            <a className="telega"
-                                               href="https://t.me/kolingram"
-                                               target="_blank"
-                                               rel="noopener noreferrer"
-                                            >telegram
-                                            </a>
-                                        </div>
+
+                                        <div className="cta">scroll down</div>
+                                    </div>
+
+                                    <div className={this.state.qrCodeShow ? 'qr-code show' : 'qr-code'}>
+                                        <a className="code" onClick={this.showQrCOde}></a>
                                     </div>
                                 </div>
-                                <div className="item">
-                                    <h1>my works</h1>
-                                </div>
+
+                                {/*<div className="item two">*/}
+                                {/*    <div className="block">*/}
+                                {/*        <h1>skills</h1>*/}
+
+                                {/*        <div className="icon-dev"></div>*/}
+
+                                {/*        <div className="skills-block">*/}
+                                {/*            <div className="skill">*/}
+                                {/*                <div className="s-title">Java Script</div>*/}
+                                {/*                <div className="s-icon"></div>*/}
+                                {/*            </div>*/}
+                                {/*            <div className="skill">*/}
+                                {/*                <div className="s-title">HTML</div>*/}
+                                {/*                <div className="s-icon"></div>*/}
+                                {/*            </div>*/}
+                                {/*            <div className="skill">*/}
+                                {/*                <div className="s-title">CSS</div>*/}
+                                {/*                <div className="s-icon"></div>*/}
+                                {/*            </div>*/}
+                                {/*        </div>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
+
+                                {/*<div className="item three">*/}
+                                {/*    <div className="block">*/}
+                                {/*        <h1>works</h1>*/}
+                                {/*        <div className="works-block">*/}
+                                {/*            <div className="works">*/}
+                                {/*                <div className="w-title"></div>*/}
+                                {/*                <div className="w-icon"></div>*/}
+                                {/*            </div>*/}
+                                {/*        </div>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
                             </ReactPageScroller>
                         </div>
                     </div>
