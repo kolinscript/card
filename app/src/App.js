@@ -78,7 +78,9 @@ class App extends Component {
                                                    href="https://t.me/koshkarovnik"
                                                    target="_blank"
                                                    rel="noopener noreferrer"
-                                                >Telegram
+                                                >
+                                                    <span className="full">Telegram</span>
+                                                    <span className="short">Tg</span>
                                                 </a>
                                             </div>
                                             <div className="link">
@@ -105,34 +107,34 @@ class App extends Component {
                                     </div>
                                 </div>
 
-                                <div className="item fish">
-                                    🚧
-                                    <span className="title">CAUTION</span>
-                                    <span className="subtitle">the page is under construction</span>
+                                <div className="item two">
+                                    <div className="block">
+                                        <h1>skills</h1>
+
+                                        <div className="about">
+                                            <div className="text">
+                                                More than a 4 years experience in web developing, participating and creating web applications, stores, sites and landing pages for big and small customers in several companies. Focused on <span className="angular">Angular</span> (about 3+ years exp.) or <span className="react">React</span> projects, i write clean, high-performance code.
+                                            </div>
+                                        </div>
+
+                                        <div className="icon-dev"></div>
+
+                                        <div className="skills-block">
+                                            <div className="skill">
+                                                <div className="s-title">Java Script</div>
+                                                <div className="s-icon"></div>
+                                            </div>
+                                            <div className="skill">
+                                                <div className="s-title">HTML</div>
+                                                <div className="s-icon"></div>
+                                            </div>
+                                            <div className="skill">
+                                                <div className="s-title">CSS</div>
+                                                <div className="s-icon"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                {/*<div className="item two">*/}
-                                {/*    <div className="block">*/}
-                                {/*        <h1>skills</h1>*/}
-
-                                {/*        <div className="icon-dev"></div>*/}
-
-                                {/*        <div className="skills-block">*/}
-                                {/*            <div className="skill">*/}
-                                {/*                <div className="s-title">Java Script</div>*/}
-                                {/*                <div className="s-icon"></div>*/}
-                                {/*            </div>*/}
-                                {/*            <div className="skill">*/}
-                                {/*                <div className="s-title">HTML</div>*/}
-                                {/*                <div className="s-icon"></div>*/}
-                                {/*            </div>*/}
-                                {/*            <div className="skill">*/}
-                                {/*                <div className="s-title">CSS</div>*/}
-                                {/*                <div className="s-icon"></div>*/}
-                                {/*            </div>*/}
-                                {/*        </div>*/}
-                                {/*    </div>*/}
-                                {/*</div>*/}
 
                                 {/*<div className="item three">*/}
                                 {/*    <div className="block">*/}
@@ -145,6 +147,12 @@ class App extends Component {
                                 {/*        </div>*/}
                                 {/*    </div>*/}
                                 {/*</div>*/}
+
+                                <div className="item fish">
+                                    🚧
+                                    <span className="title">CAUTION</span>
+                                    <span className="subtitle">the page is under construction</span>
+                                </div>
                             </ReactPageScroller>
                         </div>
                     </div>

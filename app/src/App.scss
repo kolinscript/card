@@ -85,28 +85,6 @@
             }
           }
 
-          &.fish {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            font: 500 110px/140px 'Wire One', sans-serif;
-            color: #ffffff;
-            span {
-              &.title {
-                letter-spacing: 67px;
-                padding-left: 67px;
-              }
-              &.subtitle  {
-                font-size: 30px;
-                line-height: 60px;
-                letter-spacing: 3px;
-                text-transform: uppercase;
-                font-family: 'Roboto';
-              }
-            }
-          }
-
           &.one {
             .center {
               display: flex;
@@ -124,6 +102,7 @@
 
                 .top-one, .top-two, .bot-one, .bot-two {
                   width: 100%;
+                  position: relative;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -139,6 +118,10 @@
                   width: 100%;
                   height: 60px;
                   background: #ffffff;
+                }
+
+                .top-two, .bot-one {
+                  height: 130px;
                 }
               }
 
@@ -158,9 +141,9 @@
                 }
 
                 .top-two {
-                  height: 130px;
 
                   .el {
+                    position: absolute;
                     display: flex;
                     justify-content: center;
                     align-items: flex-end;
@@ -170,19 +153,12 @@
                       font: 500 110px/110px 'Wire One', sans-serif;
                       color: #ffffff;
                     }
-
-                    &.two {
-                      font: 500 55px/80px 'Wire One', sans-serif;
-                      color: #ffffff;
-                    }
                   }
                 }
               }
 
               .bot {
                 .bot-one {
-                  height: 130px;
-
                   .el {
                     display: flex;
                     justify-content: center;
@@ -297,6 +273,14 @@
                   }
 
                   &.telega {
+                    .full {
+                      display: block;
+                    }
+
+                    .short {
+                      display: none;
+                    }
+
                     //background-color: #ffffff;
                     //mask-image: url("./telega.svg");
                     //mask-size: cover;
@@ -315,19 +299,12 @@
               top: 37px;
               right: 37px;
               transition: all var(--transition) linear;
-              /*border-radius: 50%;*/
-              /*border: 2px solid #ffffff38;*/
 
               &.show {
                 width: 100%;
                 height: 100%;
                 top: 0;
                 right: 0;
-                /*border: 2px solid transparent;*/
-                a.code {
-                  /*mask-size: 50%;*/
-                  /*-webkit-mask-size: 50%;*/
-                }
               }
 
               a.code {
@@ -342,9 +319,6 @@
                 mask-size: contain;
                 -webkit-mask-size: contain;
                 transition: background-color var(--transition) linear;
-                //background: url("./qr.svg") no-repeat;
-                //background-size: contain;
-                //background-position: 50%;
 
                 &:hover {
                   background-color: rgba(245, 245, 245, 1);
@@ -387,12 +361,38 @@
                 align-self: baseline;
               }
 
+              .about {
+                position: absolute;
+                top: 46px;
+                right: 40px;
+                width: 333px;
+
+                .text {
+                  font: 300 20px/28px 'Roboto', sans-serif;
+                  letter-spacing: 1px;
+                  text-align: right;
+                  color: #fff;
+
+                  span {
+                    font-weight: 500;
+
+                    &.angular {
+                      color: #de0331;
+                    }
+
+                    &.react {
+                      color: #61dafb;
+                    }
+                  }
+                }
+              }
+
               .icon-dev {
                 position: absolute;
                 width: 210px;
                 height: 210px;
                 bottom: -4px;
-                left: 250px;
+                left: 75px;
                 background-color: #ffffff;
                 mask-image: url("./icon-dev.svg");
                 mask-size: cover;
@@ -454,54 +454,216 @@
               }
             }
           }
+
+          &.fish {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font: 500 110px/140px 'Wire One', sans-serif;
+            color: #ffffff;
+
+            span {
+              &.title {
+                letter-spacing: 67px;
+                padding-left: 67px;
+              }
+
+              &.subtitle {
+                font-size: 30px;
+                line-height: 60px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                font-family: 'Roboto';
+              }
+            }
+          }
         }
       }
     }
   }
 }
 
-@keyframes logo-spin {
-  0% {
-    transform: rotate(0deg)
-  }
-  100% {
-    transform: rotate(360deg)
+@media screen and (max-width: 767px) {
+  .app {
+    .main {
+      .wrapper-content {
+        padding: 0;
+
+        .border {
+          padding: 0;
+        }
+
+        .content {
+          .item {
+            &.one {
+              .center {
+                width: 100vw;
+
+                .top, .bot {
+                  .top-one, .bot-two {
+                    height: 60px;
+                  }
+
+                  .top-two, .bot-one {
+                    height: 80px;
+                  }
+                }
+
+                .top {
+                  .top-one {
+                    .el {
+                      &.one {
+                        font: 500 30px/60px 'Wire One', sans-serif;
+                        letter-spacing: 34px;
+                        padding-left: 34px;
+                        color: #2d2d2d;
+                      }
+                    }
+                  }
+
+                  .top-two {
+                    .el {
+                      &.one {
+                        font: 500 70px/70px 'Wire One', sans-serif;
+                        letter-spacing: 10px;
+                        padding-left: 10px;
+                        color: #ffffff;
+                      }
+                    }
+                  }
+                }
+
+                .bot {
+                  .bot-one {
+                    .el {
+                      &.one {
+                        font: 500 80px/80px 'Wire One', sans-serif;
+                        letter-spacing: 12px;
+                        padding-left: 12px;
+                        color: #ffffff;
+                      }
+                    }
+                  }
+
+                  .bot-two {
+                    .el {
+                      &.one {
+                        font: 500 30px/60px 'Wire One', sans-serif;
+                        letter-spacing: 28px;
+                        padding-left: 28px;
+                        color: #2d2d2d;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .links {
+                top: 20px;
+                left: 20px;
+
+                .link {
+                  height: 30px;
+                  margin-left: 10px;
+
+                  a {
+                    font: 300 14px/20px 'Roboto', sans-serif;
+
+                    &.telega {
+                      .full {
+                        display: none;
+                      }
+
+                      .short {
+                        display: block;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .qr-code {
+                width: 35px;
+                height: 35px;
+                top: 17px;
+                right: 17px;
+              }
+
+              .cta {
+                bottom: 20px;
+                letter-spacing: 8px;
+                padding-left: 8px;
+              }
+            }
+
+            &.two {
+              .block {
+                padding: 20px 0;
+
+                h1 {
+                  margin: 0 20px;
+                  padding: 0 0 6px;
+                  font: 500 60px/60px 'Wire One', sans-serif;
+                  border-bottom: 8px solid #fff;
+                }
+
+                .about {
+                  max-width: 380px;
+                  width: 100%;
+                  top: 110px;
+                  left: 0;
+
+                  .text {
+                    padding: 0 40px 0 20px;
+                    font: 300 14px/20px 'Roboto', sans-serif;
+                    text-align: left;
+                  }
+                }
+
+                .icon-dev {
+                  position: absolute;
+                  width: 80px;
+                  height: 80px;
+                  bottom: -1px;
+                  left: 20px;
+                }
+
+                .skills-block {
+                  width: 100%;
+                  padding: 0 20px;
+
+                  .skill {
+                    margin-top: 5px;
+
+                    .s-title {
+                      font: 300 14px/26px 'Roboto', sans-serif;
+                      letter-spacing: 4px;
+                    }
+                  }
+                }
+              }
+            }
+
+            &.fish {
+              padding: 20px;
+              font: 500 60px/80px 'Wire One', sans-serif;
+
+              span {
+                &.title {
+                  letter-spacing: 10px;
+                  padding-left: 10px;
+                }
+
+                &.subtitle {
+                  font-size: 16px;
+                  line-height: 40px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
-
-@keyframes rainbow {
-  0% {
-    background-position: 0 50%
-  }
-  50% {
-    background-position: 100% 25%
-  }
-  100% {
-    background-position: 0 50%
-  }
-}
-
-//
-//@media screen and (max-width: 767px) {
-//  .border {
-//    padding: 0;
-//  }
-//
-//  h1 {
-//    font: 500 42px/44px 'Wire One', sans-serif;
-//  }
-//
-//  h2 {
-//    font: 500 42px/44px 'Wire One', sans-serif;
-//  }
-//
-//  .links {
-//    margin-top: 20px;
-//  }
-//
-//  .link {
-//    width: 40px;
-//    height: 40px;
-//    margin-left: 28px;
-//  }
-//}
