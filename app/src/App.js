@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './App.scss';
-import {isNil} from "lodash";
 import ReactPageScroller from "react-page-scroller";
 import {updateCanvas} from "./misc";
 
@@ -11,7 +10,8 @@ class App extends Component {
         super(props);
         this.state = {
             currentPage: null,
-            qrCodeShow: false
+            qrCodeShow: false,
+            isSafari: false
         };
         this.handlePageChange = this.handlePageChange.bind(this);
         this.showQrCOde = this.showQrCOde.bind(this);
@@ -19,6 +19,7 @@ class App extends Component {
 
     componentDidMount() {
         window.addEventListener('load', this.handleLoad);
+        this.setState({isSafari: window.safari !== undefined});
         this.drawBackground();
     }
 
@@ -39,6 +40,7 @@ class App extends Component {
             <div className="app">
                 <div className="main">
                     <div className="wrapper-canvas"></div>
+                    <div className={this.state.isSafari ? 'safari-filter active' : 'safari-filter'}></div>
                     <div className="wrapper-content">
                         <div className="border"><span></span></div>
                         <div className="content">
