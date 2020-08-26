@@ -32,6 +32,7 @@
       height: 100%;
       -webkit-backdrop-filter: blur(50px);
       filter: blur(50px);
+
       &.active {
         display: block;
       }
@@ -242,7 +243,6 @@
                 margin-left: 20px;
                 border: 1px solid #ffffff38;
                 transition: border-color var(--transition) linear;
-                //border-radius: 50%;
 
                 &:first-child {
                   margin-left: 0;
@@ -268,22 +268,11 @@
                   letter-spacing: 1px;
                   color: #ffffff38;
                   transition: color var(--transition) linear;
-                  //text-indent: -9999px;
 
                   &.github {
-                    //background-color: #ffffff;
-                    //mask-image: url("./github.svg");
-                    //mask-size: cover;
-                    //-webkit-mask-size: cover;
-                    //animation: logo-spin infinite 60s linear;
                   }
 
                   &.gmail {
-                    //background: url("./gmail.svg") no-repeat;
-                    //background-size: 102%;
-                    //background-position: 50%;
-                    //animation: logo-spin infinite 30s linear;
-                    //background-color: #ffffff;
                   }
 
                   &.telega {
@@ -294,12 +283,6 @@
                     .short {
                       display: none;
                     }
-
-                    //background-color: #ffffff;
-                    //mask-image: url("./telega.svg");
-                    //mask-size: cover;
-                    //-webkit-mask-size: cover;
-                    //animation: logo-spin infinite 15s linear;
                   }
                 }
               }
@@ -490,6 +473,14 @@
                 text-transform: uppercase;
                 font-family: 'Roboto';
               }
+
+              &.to-top {
+                text-transform: uppercase;
+                user-select: none;
+                cursor: pointer;
+                line-height: 72px;
+                font-size: 42px;
+              }
             }
           }
         }
@@ -629,7 +620,7 @@
                   left: 0;
 
                   .text {
-                    padding: 0 40px 0 20px;
+                    padding: 0 20px;
                     font: 300 14px/20px 'Roboto', sans-serif;
                     text-align: left;
                   }

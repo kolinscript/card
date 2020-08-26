@@ -16,6 +16,7 @@ class App extends Component {
         };
         this.handlePageChange = this.handlePageChange.bind(this);
         this.showQrCOde = this.showQrCOde.bind(this);
+        this.goToTop = this.goToTop.bind(this);
     }
 
     componentDidMount() {
@@ -46,6 +47,10 @@ class App extends Component {
 
     showQrCOde() {
         this.setState({qrCodeShow: !this.state.qrCodeShow});
+    }
+
+    goToTop() {
+        this.setState({currentPage: 0});
     }
 
     render() {
@@ -130,7 +135,7 @@ class App extends Component {
                                             <div className="text">
                                                 More than a 4 years experience in web developing, participating and
                                                 creating web applications, stores, sites and landing pages for big and
-                                                small customers in several companies. Focused on <span
+                                                not so customers in several companies. Focused on <span
                                                 className="angular">Angular</span> (about 3+ years exp.) or <span
                                                 className="react">React</span> projects, i write clean, high-performance
                                                 code.
@@ -172,6 +177,7 @@ class App extends Component {
                                     🚧
                                     <span className="title">CAUTION</span>
                                     <span className="subtitle">the page is under construction</span>
+                                    <span className="to-top" onClick={this.goToTop}>go to top</span>
                                 </div>
                             </ReactPageScroller>
                         </div>
