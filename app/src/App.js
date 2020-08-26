@@ -11,7 +11,8 @@ class App extends Component {
         this.state = {
             currentPage: null,
             qrCodeShow: false,
-            isSafari: false
+            isSafari: false,
+            windowHeight: null
         };
         this.handlePageChange = this.handlePageChange.bind(this);
         this.showQrCOde = this.showQrCOde.bind(this);
@@ -19,11 +20,17 @@ class App extends Component {
 
     componentDidMount() {
         window.addEventListener('load', this.handleLoad);
+        window.addEventListener('resize', () => {
+            this.setState({
+                windowHeight: window.innerHeight
+            });
+        })
         this.setState({
                 isSafari:
-                    (navigator.userAgent.match(/(iPod|iPhone|iPad)/) &&
-                    navigator.userAgent.match(/AppleWebKit/)) ||
-                    window.safari !== undefined
+                    ((navigator.userAgent.match(/(iPod|iPhone|iPad)/) &&
+                        navigator.userAgent.match(/AppleWebKit/)) ||
+                        window.safari !== undefined),
+                windowHeight: window.innerHeight
             }
         );
         this.drawBackground();
@@ -43,8 +50,8 @@ class App extends Component {
 
     render() {
         return (
-            <div className="app">
-                <div className="main">
+            <div className="app" style={{height: this.state.windowHeight}}>
+                <div className="main" style={{height: this.state.windowHeight}}>
                     <div className="wrapper-canvas"></div>
                     <div className={this.state.isSafari ? 'safari-filter active' : 'safari-filter'}></div>
                     <div className="wrapper-content">
@@ -121,7 +128,12 @@ class App extends Component {
 
                                         <div className="about">
                                             <div className="text">
-                                                More than a 4 years experience in web developing, participating and creating web applications, stores, sites and landing pages for big and small customers in several companies. Focused on <span className="angular">Angular</span> (about 3+ years exp.) or <span className="react">React</span> projects, i write clean, high-performance code.
+                                                More than a 4 years experience in web developing, participating and
+                                                creating web applications, stores, sites and landing pages for big and
+                                                small customers in several companies. Focused on <span
+                                                className="angular">Angular</span> (about 3+ years exp.) or <span
+                                                className="react">React</span> projects, i write clean, high-performance
+                                                code.
                                             </div>
                                         </div>
 

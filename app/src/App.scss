@@ -8,6 +8,7 @@
   height: 100%;
   min-width: 100vw;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
 
   .main {
     overflow: hidden;
@@ -17,6 +18,7 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
+    min-height: -webkit-fill-available;
     top: 0;
     left: 0;
 
