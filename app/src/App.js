@@ -19,7 +19,13 @@ class App extends Component {
 
     componentDidMount() {
         window.addEventListener('load', this.handleLoad);
-        this.setState({isSafari: window.safari !== undefined});
+        this.setState({
+                isSafari:
+                    (navigator.userAgent.match(/(iPod|iPhone|iPad)/) &&
+                    navigator.userAgent.match(/AppleWebKit/)) ||
+                    window.safari !== undefined
+            }
+        );
         this.drawBackground();
     }
 
