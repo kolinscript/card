@@ -133,7 +133,7 @@ class App extends Component {
 
                                         <div className="about">
                                             <div className="text">
-                                                More than a 4 years experience in web development, participating and creating web applications, stores, sites and landing pages for big and not so customers in several companies. Focused on <a className="angular" href="https://angular.io" target="_blank" rel="noopener noreferrer">Angular</a> (about 3+ years exp.) or <a className="react" href="https://reactjs.com" target="_blank" rel="noopener noreferrer">React</a> projects, i write clean, high-performance code.
+                                                More than a 4 years experience in web development, creating web applications, stores, services and landing pages for big and not so customers in several companies. Focused on <a className="angular" href="https://angular.io" target="_blank" rel="noopener noreferrer">Angular</a> (about 3+ years exp.) or <a className="react" href="https://reactjs.com" target="_blank" rel="noopener noreferrer">React</a> projects, i write clean, high-performance code.
                                             </div>
                                         </div>
 
