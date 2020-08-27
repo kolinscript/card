@@ -137,6 +137,18 @@ class App extends Component {
                                             </div>
                                         </div>
 
+                                        <div className="technologies">
+                                            <div className="tec js"></div>
+                                            <div className="tec ts"></div>
+                                            <div className="tec html"></div>
+                                            <div className="tec css"></div>
+                                            <div className="tec angular"></div>
+                                            <div className="tec react"></div>
+                                            <div className="tec node"></div>
+                                            <div className="tec mongo"></div>
+                                            <div className="tec raspberry"></div>
+                                        </div>
+
                                         <div className="icon-dev"></div>
 
                                         <div className="skills-block">

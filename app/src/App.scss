@@ -385,6 +385,85 @@
                 }
               }
 
+              .technologies {
+                position: absolute;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                top: 210px;
+                left: 40px;
+                width: 160px;
+                flex-wrap: wrap;
+
+                .tec {
+                  height: 30px;
+                  width: 30px;
+                  margin: 10px;
+
+                  &:nth-child(3n - 2) {
+                    margin-left: 0;
+                  }
+
+                  &:nth-child(3n) {
+                    margin-right: 0;
+                  }
+
+                  &.js {
+                    background: url("./icon-js.svg") no-repeat;
+                    background-position: 50%;
+                    background-size: contain;
+                  }
+
+                  &.ts {
+                    background: url("./icon-ts.svg") no-repeat;
+                    background-position: 50%;
+                    background-size: contain;
+                  }
+
+                  &.html {
+                    background: url("./icon-html5.svg") no-repeat;
+                    background-position: 50%;
+                    background-size: 125%;
+                  }
+
+                  &.css {
+                    background: url("./icon-css3.svg") no-repeat;
+                    background-position: 50%;
+                    background-size: 125%;
+                  }
+
+                  &.angular {
+                    background: url("./icon-angular.svg") no-repeat;
+                    background-position: 50%;
+                    background-size: 119%;
+                  }
+
+                  &.react {
+                    background: url("./icon-react.svg") no-repeat;
+                    background-position: 50%;
+                    background-size: 169%;
+                  }
+
+                  &.node {
+                    background: url("./icon-node.png") no-repeat;
+                    background-position: 50%;
+                    background-size: 150%;
+                  }
+
+                  &.mongo {
+                    background: url("./icon-mongodb.svg") no-repeat;
+                    background-position: 50%;
+                    background-size: 85%;
+                  }
+
+                  &.raspberry {
+                    background: url("./icon-raspberry-pi.svg") no-repeat;
+                    background-position: 50%;
+                    background-size: 100%;
+                  }
+                }
+              }
+
               .icon-dev {
                 position: absolute;
                 width: 210px;
@@ -617,13 +696,38 @@
                 .about {
                   max-width: 380px;
                   width: 100%;
-                  top: 110px;
+                  top: 165px;
                   left: 0;
 
                   .text {
                     padding: 0 20px;
                     font: 300 14px/20px 'Roboto', sans-serif;
                     text-align: left;
+                  }
+                }
+
+                .technologies {
+                  justify-content: flex-start;
+                  flex-wrap: nowrap;
+                  padding: 0 20px;
+                  width: 100%;
+                  top: 115px;
+                  left: 0;
+
+                  .tec {
+                    margin: 0 0 0 10px;
+
+                    &:nth-child(3n - 2) {
+                      margin-left: 10px;;
+                    }
+
+                    &:first-child {
+                      margin-left: 0;
+                    }
+
+                    &.mongo {
+                      margin: 0 -10px 0 0;
+                    }
                   }
                 }
 
