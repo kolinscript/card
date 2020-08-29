@@ -171,6 +171,7 @@ class App extends Component {
                                 {/*<div className="item three">*/}
                                 {/*    <div className="block">*/}
                                 {/*        <h1>works</h1>*/}
+                                {/*        <h1>during my front-dev journey i've made tons of works,  also including my home pet-projects, some of which you can see here.</h1>*/}
                                 {/*        <div className="works-block">*/}
                                 {/*            <div className="works">*/}
                                 {/*                <div className="w-title"></div>*/}
