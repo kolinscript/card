@@ -168,18 +168,42 @@ class App extends Component {
                                     </div>
                                 </div>
 
-                                {/*<div className="item three">*/}
-                                {/*    <div className="block">*/}
-                                {/*        <h1>works</h1>*/}
-                                {/*        <h1>during my front-dev journey i've made tons of works,  also including my home pet-projects, some of which you can see here.</h1>*/}
-                                {/*        <div className="works-block">*/}
-                                {/*            <div className="works">*/}
-                                {/*                <div className="w-title"></div>*/}
-                                {/*                <div className="w-icon"></div>*/}
-                                {/*            </div>*/}
-                                {/*        </div>*/}
-                                {/*    </div>*/}
-                                {/*</div>*/}
+                                <div className="item three">
+                                    <div className="block">
+                                        <h1>works</h1>
+                                        <div className="about">
+                                            <div className="text">
+                                                During my journey as a frontend developer, I did a tons of works, a very little bit of it which you can see here.
+                                            </div>
+                                        </div>
+                                        <div className="works-block">
+                                            <div className="works-titles">
+                                                <div className="work-title-item">
+                                                    <div className="w-icon pixcollector"></div>
+                                                    <div className="w-title">Pixcollector</div>
+                                                </div>
+                                               <div className="work-title-item active">
+                                                   <div className="w-icon traktrain"></div>
+                                                   <div className="w-title">Traktrain Widget</div>
+                                               </div>
+                                                <div className="work-title-item">
+                                                    <div className="w-icon quadratix"></div>
+                                                    <div className="w-title">Quadratix</div>
+                                                </div>
+                                            </div>
+                                            <div className="works-content">
+                                                <div className="work-content-item">
+                                                    <div className="wrapper">
+                                                        <div className="opener opened">
+                                                            <iframe src="https://traktrain-widget.herokuapp.com"
+                                                                    frameBorder="0" width="100%" height="100%"></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div className="item fish">
                                     🚧
